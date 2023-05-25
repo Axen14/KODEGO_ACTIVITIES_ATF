@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Flex</title>
+    <link rel="stylesheet" href="flex.css" />
+    <style>
+        .parent{
+            display:flex;
+            flex-direction:row;
+        }
+        .header{
+            height:200px;
+            width:400px;
+            background-color:rgb(9, 199, 173);
+        }
+        .article{
+            display:flex;
+            flex-direction: row;
+            width:400px;
+            height:200px;
+        }
+        .article1{
+            background-color:rgb(56, 9, 199);
+            width:200px;
+        }
+        .article2{
+            background-color:rgb(219, 96, 117);
+            width:200px; 
+        }
+        .aside{
+            background-color:rgb(95, 179, 220);
+            width:400px;   
+        }
+        .footer{
+            background-color:rgb(220, 241, 29);
+            width:800px;
+            height:50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="parent">
+            <div class="parent-container">
+                <div class="header">Header</div>
+
+                <div class="article">
+                    <div class="article1">Article1</div>
+                    <div class="article2">Article2</div>
+                </div>
+            </div>
+
+                <div class="aside">
+                    <div class="menu">Menu</div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer">Footer</div>
+            </footer>
+    </main>
+</body>
+</html>

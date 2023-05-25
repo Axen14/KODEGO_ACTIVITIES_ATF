@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+          background-color:#ebebde
+        }
+
+        .nav-item .nav-link{
+            background-color: transparent !important;
+            margin: 10px 10px;
+        }
+        .navbar-brand{
+          color:green;
+          font-weight: bold;
+        }
+        .nav-link{
+          color:#4f4747;
+          font-weight: bold;
+        }
+        .content-home1 {
+          height: 90vh;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+        }
+        .container-fluid{
+          background-color:#ebebde;
+        }
+
+        .home-heading {
+          font-size: 36px;
+          font-weight: bold;
+          line-height: 1.2;
+          margin-bottom: 20px;
+
+        }
+
+        .home-span {
+          color:green;
+        }
+
+        .desc-home {
+          font-size: 16px;
+          font-weight: 500;
+          color: #4f4747;
+          max-width: 400px;
+          line-height: 1.5;
+          margin: 14px 0;
+          padding-top: 10px;
+        }
+        .home-heading{
+          padding-top: 200px;
+          font-size:50px;
+          color:#4f4747;
+        }
+
+
+        .home-links {
+          display: inline-block;
+          text-decoration: none;
+          color: #4f4747;
+          background-color: #777764;
+          margin: 20px 0;
+          margin-right: 7px;
+          border-radius: 50px;
+          padding: 10px 30px;
+          font-size: 14px;
+          font-weight: 600;
+          transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .home-links:hover {
+          background-color: transparent;
+          color: rgb(30, 160, 164);
+          border: 1px solid rgb(30, 160, 164) !important;
+        }
+
+        .img-home {
+          margin-right: 100px;
+          max-width: 100%;
+          height: auto;
+          padding-left: 200px;
+          margin-top: 100px;
+        }
+  
+        /* About */
+        .about-us-container {
+          padding-top: 200px;
+        }
+
+        .about-heading {
+          font-size: 30px;
+          font-weight: bold;
+          color: #4f4747;
+          margin-bottom: 20px;
+        }
+
+        .about-par {
+          font-size: 16px;
+          font-weight: 500;
+          color: #4f4747;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+
+        .about-link {
+          color: #9d9d6a;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        .about-link:hover {
+          text-decoration: underline;
+        }
+
+        .about-img {
+          width: 100%;
+          height: auto;
+        }
+
+        /* Product Carousel */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          filter: invert(100%);
+        }
+        .responsive-container {
+          max-width: 100%;
+          height: auto;
+        }
+        .card-container {
+          width: 300px;
+          height: 400px;
+          margin: 0 auto;
+        }
+        .card-img-top {
+          height: 200px; 
+          object-fit: cover;
+        }
+        .my-carousel{
+          margin-top: 300px; 
+        }
+
+        .btn{
+          text-decoration: none;
+          color: #4f4747;
+          background-color:#777764;
+          margin: 20px 0;
+          margin-right: 7px;
+          border-radius: 50px;
+          padding: 10px 30px;
+          font-size: 14px;
+          font-weight: 600;
+          transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+        .card1{
+          padding-left: 100px;
+        } 
+        .card{
+          border-spacing: 100px;
+        } 
+        footer{
+          background-color: black;
+          margin:0px 0px !important;
+          height: 12vh;
+          margin-top:  30px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .social-icons {
+          display: inline-flex;
+          justify-content: center; 
+          align-items: center;
+            
+
+        }
+        .btn.btn-primary:hover {
+          background-color: transparent;
+          color: rgb(30, 160, 164);
+          border: 1px solid rgb(30, 160, 164) !important;
+        }
+        .btn.btn-primary{
+          display: inline-block;
+          text-decoration: none;
+          color: #4f4747;
+          background-color: #777764;
+          margin: 20px 0;
+          margin-right: 7px;
+          border-radius: 50px;
+          border-color: #777764;
+          padding: 10px 30px;
+          font-size: 14px;
+          font-weight: 600;
+          transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg " style="background-color:#ebebde;">
+        <div class="container">
+          <a class="navbar-brand" href="#">BrewD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contact
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Order</a></li>
+                  <li><a class="dropdown-item" href="#">Book A Table</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Work With Us</a></li>
+                </ul>
+            </ul>
+        </div>
+      </nav>
+
+
+      <!-- Home -->
+      <div class="container-fluid">
+        <div class="content-home">
+          <div class="row">
+            <div class="col-lg-7 col-md-5">
+              <div class="box-container-fluid">
+                <img src="images/back.png" class="img-home img-fluid" alt="Banner Image">
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-7">
+              <div class="box-container1">
+                <h1 class="home-heading">But First, <span class="home-span">Coffee</span></h1>
+                <p class="desc-home">Fuel your dreams with our iced coffee caramel macchiato. Savor the velvety espresso, caramel swirls, and creamy milk foam in every sip. Life's too short for bad coffee, so indulge in the best. Join us for a deliciously energizing experience. But first, coffee.</p>
+                <div class="btn-home">
+                  <a href="#" class="home-links">Brew Now</a>
+                  <a href="#" class="home-links ">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- About -->
+      <div class="container">
+        <div class="about-us-container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="about-content">
+                <h3 class="about-heading">About Us</h3>
+                <p class="about-par">
+                  At BrewD, we're passionate about all things coffee. From sourcing the highest quality beans to crafting the perfect brew, we believe that every cup of coffee should be a deliciously satisfying experience. With a focus on quality, sustainability, and innovation, we're committed to bringing you the best coffee possible. Whether you're looking for your daily dose of caffeine or a decadent treat, we've got you covered. Join us on a journey of flavor and discover the art of coffee. Welcome to BrewD!
+                </p>
+                <a href="#" class="about-link">Read More</a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12">
+              <img src="images/latte.jpg" class="about-img img-fluid" alt="Coffee Image">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product best sellers -->
+<div class="bSellers" style="margin-top: 150px; text-align: center;">
+  <h2>~~~~BEST SELLERS~~~~</h2>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="padding-top: 50px;">
+      <div class="carousel-item active"> 
+              <div class="container">
+                <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="card1" style="width: 18rem;">
+                    <img src="images/am.jpg" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 1</h5>
+                      <p class="card-text">Price Range: $10 - $20</p>
+                      <div class="star-ratings">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <a href="#" class="btn btn-primary">Brew Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card1" style="width: 18rem;">
+                        <img src="images/capuccino.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                    <h5 class="card-title">Card 1</h5>
+                    <p class="card-text">Price Range: $10 - $20</p>
+                    <div class="star-ratings">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <a href="#" class="btn btn-primary">Brew Now</a>
+                  </div>
+                </div>
+              </div>
+               
+
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card1" style="width: 18rem;">
+                        <img src="images/caramel machiato.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                    <h5 class="card-title">Card 1</h5>
+                    <p class="card-text">Price Range: $10 - $20</p>
+                    <div class="star-ratings">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <a href="#" class="btn btn-primary">Brew Now</a>
+                  </div>
+                      </div>
+                    </div> 
+                </div>
+                </div> 
+            </div>    
+           
+        
+               <div class="carousel-item">
+                <div class="container" >
+                <div class=row> 
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card1" style="width: 18rem;">
+                      <img src="images/caramel machiato.jpg" class="card-img-top" alt="Image 1">
+                      <div class="card-body">
+                  <h5 class="card-title">Card 1</h5>
+                  <p class="card-text">Price Range: $10 - $20</p>
+                  <div class="star-ratings">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <a href="#" class="btn btn-primary">Brew Now</a>
+                </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card1" style="width: 18rem;">
+                      <img src="images/am.jpg" class="card-img-top" alt="Image 1">
+                      <div class="card-body">
+                  <h5 class="card-title">Card 1</h5>
+                  <p class="card-text">Price Range: $10 - $20</p>
+                  <div class="star-ratings">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <a href="#" class="btn btn-primary">Brew Now</a>
+                </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card1" style="width: 18rem;">
+                      <img src="images/capuccino.jpg" class="card-img-top" alt="Image 1">
+                      <div class="card-body">
+                  <h5 class="card-title">Card 1</h5>
+                  <p class="card-text">Price Range: $10 - $20</p>
+                  <div class="star-ratings">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <a href="#" class="btn btn-primary">Brew Now</a>
+                </div>
+                    </div>
+                  </div>
+                  
+                  </div>
+                </div>
+            </div>
+          
+      
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+  </div>
+</div>  
+
+
+
+
+
+                    <!-- PRODUCT CATEGORY -->
+
+    <div class="categ-head" style="font-weight: bold; text-align: center; margin-top: 200px;">
+      <h3>Cofee Categories</h3></div>
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-top: 50px;">
+      <div class="col">
+        <div class="card">
+          <img src="images/hotcof.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Hot Coffee</h5>
+            <p class="card-text">Hot coffee, endless comfort. Savor the warmth and richness of our expertly crafted blends, made with the finest beans. Whether you need a morning boost or an afternoon pick-me-up, we've got you covered. Join us for a steaming cup of perfection. Because when it comes to coffee, hot is always in.</p>
+          </div>
+          <a href="#" class="btn btn-primary">More</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/iced.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cold Coffee</h5>
+            <p class="card-text">Chill out with our refreshing iced coffee. Made with our expertly crafted coffee blends, chilled to perfection, and served over ice, our iced coffee is the perfect pick-me-up on a hot day. Whether you prefer it bold and black or sweet and creamy, we've got you covered. Join us for a deliciously cool and energizing experience. Because when it comes to coffee, a little chill goes a long way.</p>
+            <a href="#" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/frappe.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Coffee Frappe</h5>
+            <p class="card-text">Indulge in our creamy and delicious coffee frappes. Made with our expertly crafted coffee blends and blended to perfection with creamy milk, ice, and your favorite flavors, our coffee frappes are the ultimate treat. Whether you need a midday pick-me-up or a decadent dessert, we've got you covered. Join us for a sip of pure bliss. Because when it comes to coffee, a little indulgence never hurts.</p>
+            <a href="#" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDER FORM -->
+
+      <div class="col-md-6" style="width: 45%;float: left; border-spacing: 10%;">
+    <div class="Orders" style="margin-top: 200px;">
+      <div class="heading-work" style="background-color:#dcdcc5;"><h3 style="text-align: center;">FOR ORDERS ONLY</h3> 
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-12">
+          <label for="validationCustom01" class="form-label">Name</label>
+          <input type="text" class="form-control" id="validationCustom01" value="Mark John" style="color: rgb(186, 184, 184);" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationCustomUserContact" class="form-label">Phone Number</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">+63</span>
+            <input type="text" class="form-control" id="validationCustomUsername" value="9123456789"style="color: rgb(186, 184, 184);" required>
+            <div class="invalid-feedback">
+              Please enter a valid phone number.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationCustom01" class="form-label">Address</label>
+          <input type="text" class="form-control" id="validationCustom01" value="#123,Omfeg St..."style="color: rgb(186, 184, 184);" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom04" class="form-label">Flavor</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Caramel</option>
+            <option>Caramel macchiato</option>
+            <option>Capuccino</option>
+            <option>Americano</option>
+            <option>Espresso</option>
+            <option>Latte</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select again.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Size</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid size.
+          </div>
+        </div>
+        <div class="row" style="padding-top: 10px;">
+          <div class="col-lg-12">
+            <div class="mb-3">
+                <textarea class="form-control" placeholder="Message" style="color: rgb(186, 184, 184);" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-12" style="text-align: center;">
+            <button class="btn btn-primary" type="submit">Brew Now</button>
+          </div>
+        </form></div></div></div>
+
+    <!-- Book a Table -->
+    <div class="col-md-6" style="width: 45%;float: right;">
+    <div class="Booking" style="margin-top: 200px;">
+    <div class="heading-work" style="background-color:#dcdcc5;"><h3 style="text-align: center;">BOOK A TABLE</h3> 
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-6">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input type="text" class="form-control" id="validationCustom01" value="Mark" style="color: rgb(186, 184, 184);" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" value="Otto" style="color: rgb(186, 184, 184);" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustomUserEmail" class="form-label">Email</label>
+          <input type="text" class="form-control" id="validationEmail" value="@email.com" style="color: rgb(186, 184, 184);" required>
+          <div class="invalid-feedback">
+            Please enter valid email.
+          </div>
+        </div>
+      <div class="col-md-4">
+        <label for="validationCustomUserContact" class="form-label">Phone Number</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">+63</span>
+          <input type="text" class="form-control" id="validationCustomUsername" value="9123456789" style="color: rgb(186, 184, 184);" required>
+          <div class="invalid-feedback">
+            Please enter a valid phone number.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustomUserReservationdate" class="form-label">Reservation Date</label>
+          <input type="text" class="form-control" id="validationResDate" value="MM/DD/YYYY" style="color: rgb(186, 184, 184);" required>
+          <div class="invalid-feedback">
+            Please enter valid date.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustomUserReservationtime" class="form-label">Reservation Time</label>
+            <input type="text" class="form-control" id="validationResTime" value="HH:MM AM/PM" style="color: rgb(186, 184, 184);" required>
+            <div class="invalid-feedback">
+              Please enter valid time.
+            </div>
+          </div>
+        <div class="col-md-6">
+          <label for="validationCustomUserQuantity" class="form-label">How many people will you be with?</label>
+            <input type="text" class="form-control" id="validationQuantity" value="####" style="color: rgb(186, 184, 184);" required>
+            <div class="valid-feedback">
+              Interesting!
+            </div>
+          </div>
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-lg-12">
+              <div class="mb-3">
+                  <textarea class="form-control" placeholder="Message" id="exampleFormControlTextarea1" style="color: rgb(186, 184, 184);" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input"style="padding-left: 5px;" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12" style="text-align: center;">
+        <button class="btn btn-primary" type="submit">Reserve Now</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+ 
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+
+ 
+</body>   
+<!-- Footer -->
+
+  <footer style=" bottom: 0; width: 100%; background-color:rgba(12, 118, 99, 0.627); text-align: center;">
+    <div><h6 style="color: white;">Social Media</h6>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook" style="margin-right: 10px;"></i></a>
+      <a href="#"><i class="fab fa-twitter"style="margin-right: 10px;"></i></a>
+      <a href="#"><i class="fab fa-instagram"style="margin-right: 10px;"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div></div>
+  </footer>
+</html>
